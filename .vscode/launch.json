@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run BusinessPartners (ES5)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/fioridemo-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/nsBusinessPartners/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/BusinessPartners",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/FioriDemo/BusinessPartners\"}"
+      },
+      "envFile": "${workspaceFolder}/BusinessPartners/.env2",
+      "preLaunchTask": "Build FioriDemo"
+    }
+  ]
+}
